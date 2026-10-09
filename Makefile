@@ -34,7 +34,8 @@ test: build
 		exit 1; \
 	fi
 	@echo "TEST PASSED"
-
+count: build
+	@ls -1 $(SRC_DIR)/*.txt | wc -l
 clean:
 	rm -rf $(OUT_DIR)
 
