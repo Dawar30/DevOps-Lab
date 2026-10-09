@@ -34,7 +34,8 @@ test: build
 		exit 1; \
 	fi
 	@echo "TEST PASSED"
-
+count: build
+	@wc -w $(OUTPUTS) | tail -1
 clean:
 	rm -rf $(OUT_DIR)
 
